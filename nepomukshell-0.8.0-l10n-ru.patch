@@ -1,0 +1,760 @@
+diff -urN nepomukshell-0.8.0-orig/CMakeLists.txt nepomukshell-0.8.0/CMakeLists.txt
+--- nepomukshell-0.8.0-orig/CMakeLists.txt	2011-10-28 15:48:34.021351065 +0600
++++ nepomukshell-0.8.0/CMakeLists.txt	2011-10-28 15:48:45.453244506 +0600
+@@ -73,3 +73,7 @@
+ install(FILES nepomukshellui.rc DESTINATION  ${DATA_INSTALL_DIR}/nepomukshell)
+ 
+ add_subdirectory(doc)
++
++find_package(Msgfmt REQUIRED)
++find_package(Gettext REQUIRED)
++add_subdirectory(po)
+diff -urN nepomukshell-0.8.0-orig/po/CMakeLists.txt nepomukshell-0.8.0/po/CMakeLists.txt
+--- nepomukshell-0.8.0-orig/po/CMakeLists.txt	1970-01-01 05:00:00.000000000 +0500
++++ nepomukshell-0.8.0/po/CMakeLists.txt	2011-10-28 15:48:45.455244502 +0600
+@@ -0,0 +1 @@
++add_subdirectory(ru)
+diff -urN nepomukshell-0.8.0-orig/po/nepomukshell.pot nepomukshell-0.8.0/po/nepomukshell.pot
+--- nepomukshell-0.8.0-orig/po/nepomukshell.pot	1970-01-01 05:00:00.000000000 +0500
++++ nepomukshell-0.8.0/po/nepomukshell.pot	2011-10-18 16:02:27.000000000 +0600
+@@ -0,0 +1,362 @@
++# SOME DESCRIPTIVE TITLE.
++# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
++# This file is distributed under the same license as the PACKAGE package.
++# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
++#
++#, fuzzy
++msgid ""
++msgstr ""
++"Project-Id-Version: PACKAGE VERSION\n"
++"Report-Msgid-Bugs-To: https://qa.mandriva.com\n"
++"POT-Creation-Date: 2011-10-18 16:02+0600\n"
++"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
++"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
++"Language-Team: LANGUAGE <LL@li.org>\n"
++"Language: \n"
++"MIME-Version: 1.0\n"
++"Content-Type: text/plain; charset=UTF-8\n"
++"Content-Transfer-Encoding: 8bit\n"
++"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
++
++#: infosplash.cpp:36
++msgid "Welcome"
++msgstr ""
++
++#: infosplash.cpp:46
++msgid ""
++"<h2>NepSaK</h2><p>The <b>Nep</b>omuk <b>S</b>wiss <b>A</b>rmy <b>K</b>nife</"
++"p> %1<p>Copyright (C) 2008-2010 Sebastian Trueg &lt;trueg@kde.org&gt;<br/"
++">2010 Vishesh Handa &lt;handa.vish@gmail.com&gt;</p><p>NepSak is a "
++"maintenance and debugging tool intended for developers. It is NOT intended "
++"for the end user.</p><p>NepSak allows to browse, query, and edit your "
++"Nepomuk resources. It provides the means to modify, delete, and mess up your "
++"data in any way possible.</p><p><b>USE WITH CARE</b></p>"
++msgstr ""
++
++#: main.cpp:33
++msgid "Nepomuk Shell"
++msgstr ""
++
++#: main.cpp:35
++msgid "NepSak - The Nepomuk Shell"
++msgstr ""
++
++#: main.cpp:37
++msgid "(c) 2008-2010, Sebastian Trüg"
++msgstr ""
++
++#: main.cpp:40
++msgid "Sebastian Trüg"
++msgstr ""
++
++#: main.cpp:40
++msgid "Maintainer"
++msgstr ""
++
++#: main.cpp:41
++msgid "Vishesh Handa"
++msgstr ""
++
++#: main.cpp:41
++msgid "Developer"
++msgstr ""
++
++#: main.cpp:47
++msgid "An optional URI of a file or resource to edit"
++msgstr ""
++
++#: mainwindow.cpp:68
++msgid "NepSaK - The Nepomuk Shell"
++msgstr ""
++
++#: mainwindow.cpp:150
++msgctxt "@action:button create a new subclass to an existing RDF class"
++msgid "Create Subclass"
++msgstr ""
++
++#: mainwindow.cpp:151
++msgctxt "@action:button create a new subproperty to an existing RDF property"
++msgid "Create Property"
++msgstr ""
++
++#: mainwindow.cpp:152
++msgctxt "@action:button create a new Nepomuk resource of any type"
++msgid "Create Resource"
++msgstr ""
++
++#: mainwindow.cpp:166
++msgctxt "@action:button"
++msgid "Browse Resources"
++msgstr ""
++
++#: mainwindow.cpp:173
++msgctxt "@action:button"
++msgid "Query Resources"
++msgstr ""
++
++#: mainwindow.cpp:180
++msgctxt "@action:button"
++msgid "Edit Resource"
++msgstr ""
++
++#: mainwindow.cpp:197
++msgctxt "@action:button"
++msgid "Delete Resource"
++msgstr ""
++
++#: mainwindow.cpp:204
++msgctxt "@action:button"
++msgid "Show Serialized Resource"
++msgstr ""
++
++#: mainwindow.cpp:215
++msgctxt "@action:auto indents a query"
++msgid "Auto Indent Query"
++msgstr ""
++
++#: mainwindow.cpp:272
++msgid "No Resource to delete selected."
++msgstr ""
++
++#: mainwindow.cpp:280
++msgid "Do you really want to delete these resources?"
++msgstr ""
++
++#: mainwindow.cpp:282
++msgid "Deleting Resources"
++msgstr ""
++
++#: mainwindow.cpp:299
++msgid "Resource Browser"
++msgstr ""
++
++#: mainwindow.cpp:301
++msgid "Configure the Resource Browser"
++msgstr ""
++
++#: mainwindow.cpp:323
++msgid "Open a file or Nepomuk resource to edit"
++msgstr ""
++
++#: mainwindow.cpp:343
++msgid "Could not find a useful Soprano serializer plugin."
++msgstr ""
++
++#: mainwindow.cpp:363
++msgid "Show Resource Source"
++msgstr ""
++
++#: newclassdialog.cpp:40
++msgid "Create new Type"
++msgstr ""
++
++#: newclassdialog.cpp:67
++msgid "Create New Type"
++msgstr ""
++
++#: newclassdialog.cpp:68
++msgid "based on <i>%1</i>"
++msgstr ""
++
++#: newclassdialog.cpp:96
++msgid "Create New Property"
++msgstr ""
++
++#: newclassdialog.cpp:97
++msgid "for <i>%1</i>"
++msgstr ""
++
++#: newclassdialog.cpp:134
++msgid "Create New Resource"
++msgstr ""
++
++#: newclassdialog.cpp:135
++msgid "of type <i>%1</i>"
++msgstr ""
++
++#: resourcebrowserwidget.cpp:83
++msgctxt ""
++"@item:inlistbox Referring to all RDF classes in the Nepomuk PIMO ontology"
++msgid "PIMO Classes"
++msgstr ""
++
++#: resourcebrowserwidget.cpp:84
++msgctxt "@item:inlistbox Referring to all RDF classes in the Nepomuk db"
++msgid "All Classes"
++msgstr ""
++
++#: resourceeditorwidget.cpp:91
++msgid "Delete statement"
++msgstr ""
++
++#: resourcepropertymodel.cpp:207
++msgctxt "@item refers to an unknown date"
++msgid "Unknown"
++msgstr ""
++
++#: resourcepropertymodel.cpp:213
++msgid "An invalid creation date means invalid Nepomuk data!"
++msgstr ""
++
++#: resourcepropertymodel.cpp:228
++msgctxt "@title:column The RDF property of a triple"
++msgid "Property"
++msgstr ""
++
++#: resourcepropertymodel.cpp:230
++msgctxt "@title:column The object value of an RDF triple"
++msgid "Value"
++msgstr ""
++
++#: resourcepropertymodel.cpp:232
++msgctxt "@title:column The creation date of an RDF triple"
++msgid "Creation Date"
++msgstr ""
++
++#: resourcequerywidget.cpp:189
++msgid "Query error"
++msgstr ""
++
++#: resourcequerywidget.cpp:194
++msgid "Elapsed: %1"
++msgstr ""
++
++#: resourceview.cpp:154
++msgid "%1 result"
++msgid_plural "%1 results"
++msgstr[0] ""
++msgstr[1] ""
++
++#: resourceview.cpp:154
++msgid "Page %2 of %1"
++msgid_plural "Page %2 of %1"
++msgstr[0] ""
++msgstr[1] ""
++
++#: resourceview.cpp:157
++msgid "Page %1"
++msgstr ""
++
++#. i18n: file: nepomukshellui.rc:25
++#. i18n: ectx: Menu (resource)
++#: rc.cpp:3
++msgid "Resource"
++msgstr ""
++
++#. i18n: file: nepomukshellui.rc:32
++#. i18n: ectx: ToolBar (mainToolBar)
++#: rc.cpp:6
++msgid "Main Toolbar"
++msgstr ""
++
++#. i18n: file: newclassdialog.ui:40
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#: rc.cpp:9
++msgid "Name:"
++msgstr ""
++
++#. i18n: file: newclassdialog.ui:58
++#. i18n: ectx: property (icon), widget (KIconButton, m_buttonClassIcon)
++#: rc.cpp:12
++msgid "unknown"
++msgstr ""
++
++#. i18n: file: newclassdialog.ui:83
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:15
++msgid "Detailed Description (optional):"
++msgstr ""
++
++#. i18n: file: newclassdialog.ui:121
++#. i18n: ectx: property (text), widget (QLabel, label_3)
++#: rc.cpp:18
++msgid "Property Range:"
++msgstr ""
++
++#. i18n: file: resourceeditorwidget.ui:19
++#. i18n: ectx: property (text), widget (QToolButton, m_buttonBack)
++#. i18n: file: resourceeditorwidget.ui:26
++#. i18n: ectx: property (text), widget (QToolButton, m_buttonForward)
++#. i18n: file: resourcequerywidget.ui:35
++#. i18n: ectx: property (text), widget (QToolButton, m_buttonBack)
++#. i18n: file: resourcequerywidget.ui:45
++#. i18n: ectx: property (text), widget (QToolButton, m_buttonForward)
++#. i18n: file: resourceview.ui:55
++#. i18n: ectx: property (text), widget (QToolButton, m_pageBackButton)
++#. i18n: file: resourceview.ui:62
++#. i18n: ectx: property (text), widget (QToolButton, m_pageForwardButton)
++#: rc.cpp:21 rc.cpp:24 rc.cpp:39 rc.cpp:45 rc.cpp:57 rc.cpp:60
++msgid "..."
++msgstr ""
++
++#. i18n: file: resourceeditorwidget.ui:40
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:27
++msgid "Resource URI:"
++msgstr ""
++
++#. i18n: file: resourceeditorwidget.ui:68
++#. i18n: ectx: property (text), widget (QLabel, label_3)
++#: rc.cpp:30
++msgid "Backlinks:"
++msgstr ""
++
++#. i18n: file: resourcequerywidget.ui:25
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:33
++msgid "Please enter a SPARQL query:"
++msgstr ""
++
++#. i18n: file: resourcequerywidget.ui:32
++#. i18n: ectx: property (toolTip), widget (QToolButton, m_buttonBack)
++#: rc.cpp:36
++msgid "Browse back in the query history"
++msgstr ""
++
++#. i18n: file: resourcequerywidget.ui:42
++#. i18n: ectx: property (toolTip), widget (QToolButton, m_buttonForward)
++#: rc.cpp:42
++msgid "Browse forward in the query history"
++msgstr ""
++
++#. i18n: file: resourcequerywidget.ui:52
++#. i18n: ectx: property (text), widget (QPushButton, m_shorten)
++#: rc.cpp:48
++msgid "Shorten Query"
++msgstr ""
++
++#. i18n: file: resourcequerywidget.ui:59
++#. i18n: ectx: property (text), widget (QPushButton, m_queryButton)
++#: rc.cpp:51
++msgid "Run Query"
++msgstr ""
++
++#. i18n: file: resourcequerywidget.ui:66
++#. i18n: ectx: property (text), widget (QPushButton, m_stopQueryButton)
++#: rc.cpp:54
++msgid "Stop Query"
++msgstr ""
++
++#. i18n: file: settings/nepomukshellsettings.kcfg:9
++#. i18n: ectx: label, entry (recursiveQuery), group (ResourceBrowsing)
++#. i18n: file: settings/resourcebrowsersettingspage.ui:17
++#. i18n: ectx: property (text), widget (QCheckBox, kcfg_recursiveQuery)
++#: rc.cpp:63 rc.cpp:69
++msgid "Recursively query resources"
++msgstr ""
++
++#. i18n: file: settings/nepomukshellsettings.kcfg:13
++#. i18n: ectx: label, entry (queryLimit), group (ResourceBrowsing)
++#: rc.cpp:66
++msgid "Maximum number of results to show on one page"
++msgstr ""
++
++#: rc.cpp:70
++msgctxt "NAME OF TRANSLATORS"
++msgid "Your names"
++msgstr ""
++
++#: rc.cpp:71
++msgctxt "EMAIL OF TRANSLATORS"
++msgid "Your emails"
++msgstr ""
+diff -urN nepomukshell-0.8.0-orig/po/ru/CMakeLists.txt nepomukshell-0.8.0/po/ru/CMakeLists.txt
+--- nepomukshell-0.8.0-orig/po/ru/CMakeLists.txt	1970-01-01 05:00:00.000000000 +0500
++++ nepomukshell-0.8.0/po/ru/CMakeLists.txt	2011-10-28 15:48:45.620242960 +0600
+@@ -0,0 +1,2 @@
++file(GLOB _po_files *.po)
++GETTEXT_PROCESS_PO_FILES(ru ALL INSTALL_DESTINATION ${LOCALE_INSTALL_DIR} ${_po_files})
+diff -urN nepomukshell-0.8.0-orig/po/ru/nepomukshell.po nepomukshell-0.8.0/po/ru/nepomukshell.po
+--- nepomukshell-0.8.0-orig/po/ru/nepomukshell.po	1970-01-01 05:00:00.000000000 +0500
++++ nepomukshell-0.8.0/po/ru/nepomukshell.po	2011-10-28 15:48:45.743241993 +0600
+@@ -0,0 +1,368 @@
++# Translation to Russian
++# Copyright (C) 1999-2011 Mandriva
++# ROSA Desktop
++# Julia Dronova <juliette.tux@gmail.com>, 2011
++#
++msgid ""
++msgstr ""
++"Project-Id-Version: ROSA2011\n"
++"Report-Msgid-Bugs-To: https://qa.mandriva.com\n"
++"POT-Creation-Date: 2011-10-18 16:02+0600\n"
++"PO-Revision-Date: 2011-10-20 11:27+0000\n"
++"Last-Translator: Julia <juliette.tux@gmail.com>\n"
++"Language-Team: Russian <l10n@rosalab.ru>\n"
++"MIME-Version: 1.0\n"
++"Content-Type: text/plain; charset=UTF-8\n"
++"Content-Transfer-Encoding: 8bit\n"
++"Language: ru\n"
++"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
++
++#: infosplash.cpp:36
++msgid "Welcome"
++msgstr "Добро пожаловать!"
++
++#: infosplash.cpp:46
++msgid ""
++"<h2>NepSaK</h2><p>The <b>Nep</b>omuk <b>S</b>wiss <b>A</b>rmy "
++"<b>K</b>nife</p> %1<p>Copyright (C) 2008-2010 Sebastian Trueg "
++"&lt;trueg@kde.org&gt;<br/>2010 Vishesh Handa "
++"&lt;handa.vish@gmail.com&gt;</p><p>NepSak is a maintenance and debugging "
++"tool intended for developers. It is NOT intended for the end "
++"user.</p><p>NepSak allows to browse, query, and edit your Nepomuk resources."
++" It provides the means to modify, delete, and mess up your data in any way "
++"possible.</p><p><b>USE WITH CARE</b></p>"
++msgstr ""
++"<h2>NepSaK</h2><p> -- <b>У</b>ниверсальный <b>И</b>нструментарий</p> <b>Nep</b>omuk \n"
++" %1<p>Copyright (C) 2008-2010 Sebastian Trueg &lt;trueg@kde.org&gt;<br/>2010 Vishesh Handa &lt;handa.vish@gmail.com&gt;</p><p>NepSak -- это инструмент для сопровождения и отладки кода, предназначенный для разработчиков. Он НЕ предназначен для простого пользователя.</p><p>NepSak предоставляет возможности для просмотра, запросов и редактирования ресурсов Nepomuk. Он позволяет изменять, удалять и наводить беспорядок в данных любым возможным способом.</p><p><b>ПРИМЕНЯТЬ ОСТОРОЖНО!</b></p>"
++
++#: main.cpp:33
++msgid "Nepomuk Shell"
++msgstr "Nepomuk Shell"
++
++#: main.cpp:35
++msgid "NepSak - The Nepomuk Shell"
++msgstr "NepSak - The Nepomuk Shell"
++
++#: main.cpp:37
++msgid "(c) 2008-2010, Sebastian Trüg"
++msgstr "(c) 2008-2010, Себастьян Трюг (Sebastian Trüg)"
++
++#: main.cpp:40
++msgid "Sebastian Trüg"
++msgstr "Себастьян Трюг"
++
++#: main.cpp:40
++msgid "Maintainer"
++msgstr "Мейнтейнер"
++
++#: main.cpp:41
++msgid "Vishesh Handa"
++msgstr "Вишнеш Ханда (Vishesh Handa)"
++
++#: main.cpp:41
++msgid "Developer"
++msgstr "Разработчик"
++
++#: main.cpp:47
++msgid "An optional URI of a file or resource to edit"
++msgstr "Дополнительный адрес URI файла или ресурса, для редактирования"
++
++#: mainwindow.cpp:68
++msgid "NepSaK - The Nepomuk Shell"
++msgstr "NepSak - The Nepomuk Shell"
++
++#: mainwindow.cpp:150
++msgctxt "@action:button create a new subclass to an existing RDF class"
++msgid "Create Subclass"
++msgstr "Создать подкласс"
++
++#: mainwindow.cpp:151
++msgctxt "@action:button create a new subproperty to an existing RDF property"
++msgid "Create Property"
++msgstr "Создать свойство"
++
++#: mainwindow.cpp:152
++msgctxt "@action:button create a new Nepomuk resource of any type"
++msgid "Create Resource"
++msgstr "Создать ресурс"
++
++#: mainwindow.cpp:166
++msgctxt "@action:button"
++msgid "Browse Resources"
++msgstr "Просмотреть ресурсы"
++
++#: mainwindow.cpp:173
++msgctxt "@action:button"
++msgid "Query Resources"
++msgstr "Поиск по ресурсам"
++
++#: mainwindow.cpp:180
++msgctxt "@action:button"
++msgid "Edit Resource"
++msgstr "Редактировать ресурс"
++
++#: mainwindow.cpp:197
++msgctxt "@action:button"
++msgid "Delete Resource"
++msgstr "Удалить ресурс"
++
++#: mainwindow.cpp:204
++msgctxt "@action:button"
++msgid "Show Serialized Resource"
++msgstr "Показать сериализованный ресурс"
++
++#: mainwindow.cpp:215
++msgctxt "@action:auto indents a query"
++msgid "Auto Indent Query"
++msgstr "Применить автоотступы в форме поиска"
++
++#: mainwindow.cpp:272
++msgid "No Resource to delete selected."
++msgstr "Не выбран ресурс для удаления"
++
++#: mainwindow.cpp:280
++msgid "Do you really want to delete these resources?"
++msgstr "Вы действительно хотите удалить эти ресурсы?"
++
++#: mainwindow.cpp:282
++msgid "Deleting Resources"
++msgstr "Удаляю ресурсы..."
++
++#: mainwindow.cpp:299
++msgid "Resource Browser"
++msgstr "Просмотрщик ресурсов"
++
++#: mainwindow.cpp:301
++msgid "Configure the Resource Browser"
++msgstr "Настроить просмотрщик ресурсов"
++
++#: mainwindow.cpp:323
++msgid "Open a file or Nepomuk resource to edit"
++msgstr "Откройте файл или ресурс Nepomuk для редактирования"
++
++#: mainwindow.cpp:343
++msgid "Could not find a useful Soprano serializer plugin."
++msgstr "Не удалось найти применимый плагин для Soprano"
++
++#: mainwindow.cpp:363
++msgid "Show Resource Source"
++msgstr "Показать источник ресурса"
++
++#: newclassdialog.cpp:40
++msgid "Create new Type"
++msgstr "Создать новый тип"
++
++#: newclassdialog.cpp:67
++msgid "Create New Type"
++msgstr "Создать новый тип"
++
++#: newclassdialog.cpp:68
++msgid "based on <i>%1</i>"
++msgstr "на основе <i>%1</i>"
++
++#: newclassdialog.cpp:96
++msgid "Create New Property"
++msgstr "Создать новое свойство"
++
++#: newclassdialog.cpp:97
++msgid "for <i>%1</i>"
++msgstr "для <i>%1</i>"
++
++#: newclassdialog.cpp:134
++msgid "Create New Resource"
++msgstr "Создать новый ресурс"
++
++#: newclassdialog.cpp:135
++msgid "of type <i>%1</i>"
++msgstr "типа <i>%1</i>"
++
++#: resourcebrowserwidget.cpp:83
++msgctxt ""
++"@item:inlistbox Referring to all RDF classes in the Nepomuk PIMO ontology"
++msgid "PIMO Classes"
++msgstr "Классы PIMO"
++
++#: resourcebrowserwidget.cpp:84
++msgctxt "@item:inlistbox Referring to all RDF classes in the Nepomuk db"
++msgid "All Classes"
++msgstr "Все классы"
++
++#: resourceeditorwidget.cpp:91
++msgid "Delete statement"
++msgstr "Удалить оператор"
++
++#: resourcepropertymodel.cpp:207
++msgctxt "@item refers to an unknown date"
++msgid "Unknown"
++msgstr "Неизвестно"
++
++#: resourcepropertymodel.cpp:213
++msgid "An invalid creation date means invalid Nepomuk data!"
++msgstr "Неверная дата создания означает нерабочие данные Nepomuk!"
++
++#: resourcepropertymodel.cpp:228
++msgctxt "@title:column The RDF property of a triple"
++msgid "Property"
++msgstr "Свойство"
++
++#: resourcepropertymodel.cpp:230
++msgctxt "@title:column The object value of an RDF triple"
++msgid "Value"
++msgstr "Значение"
++
++#: resourcepropertymodel.cpp:232
++msgctxt "@title:column The creation date of an RDF triple"
++msgid "Creation Date"
++msgstr "Дата создания"
++
++#: resourcequerywidget.cpp:189
++msgid "Query error"
++msgstr "Ошибка поиска"
++
++#: resourcequerywidget.cpp:194
++msgid "Elapsed: %1"
++msgstr "Прошло времени:  %1"
++
++#: resourceview.cpp:154
++msgid "%1 result"
++msgid_plural "%1 results"
++msgstr[0] "%1 результат"
++msgstr[1] "%1 результатов"
++msgstr[2] "%1 результатов"
++
++#: resourceview.cpp:154
++msgid "Page %2 of %1"
++msgid_plural "Page %2 of %1"
++msgstr[0] "Страница %2 из %1"
++msgstr[1] "Страницы %2 из %1"
++msgstr[2] "Страницы %2 из %1"
++
++#: resourceview.cpp:157
++msgid "Page %1"
++msgstr "Страница %1"
++
++#. i18n: file: nepomukshellui.rc:25
++#. i18n: ectx: Menu (resource)
++#: rc.cpp:3
++msgid "Resource"
++msgstr "Ресурс"
++
++#. i18n: file: nepomukshellui.rc:32
++#. i18n: ectx: ToolBar (mainToolBar)
++#: rc.cpp:6
++msgid "Main Toolbar"
++msgstr "Главная панель инструментов"
++
++#. i18n: file: newclassdialog.ui:40
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#: rc.cpp:9
++msgid "Name:"
++msgstr "Имя:"
++
++#. i18n: file: newclassdialog.ui:58
++#. i18n: ectx: property (icon), widget (KIconButton, m_buttonClassIcon)
++#: rc.cpp:12
++msgid "unknown"
++msgstr "неизвестно"
++
++#. i18n: file: newclassdialog.ui:83
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:15
++msgid "Detailed Description (optional):"
++msgstr "Подробное описание (по желанию):"
++
++#. i18n: file: newclassdialog.ui:121
++#. i18n: ectx: property (text), widget (QLabel, label_3)
++#: rc.cpp:18
++msgid "Property Range:"
++msgstr "Диапазон свойства:"
++
++#. i18n: file: resourceeditorwidget.ui:19
++#. i18n: ectx: property (text), widget (QToolButton, m_buttonBack)
++#. i18n: file: resourceeditorwidget.ui:26
++#. i18n: ectx: property (text), widget (QToolButton, m_buttonForward)
++#. i18n: file: resourcequerywidget.ui:35
++#. i18n: ectx: property (text), widget (QToolButton, m_buttonBack)
++#. i18n: file: resourcequerywidget.ui:45
++#. i18n: ectx: property (text), widget (QToolButton, m_buttonForward)
++#. i18n: file: resourceview.ui:55
++#. i18n: ectx: property (text), widget (QToolButton, m_pageBackButton)
++#. i18n: file: resourceview.ui:62
++#. i18n: ectx: property (text), widget (QToolButton, m_pageForwardButton)
++#: rc.cpp:21 rc.cpp:24 rc.cpp:39 rc.cpp:45 rc.cpp:57 rc.cpp:60
++msgid "..."
++msgstr "..."
++
++#. i18n: file: resourceeditorwidget.ui:40
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:27
++msgid "Resource URI:"
++msgstr "Адрес URI ресурса:"
++
++#. i18n: file: resourceeditorwidget.ui:68
++#. i18n: ectx: property (text), widget (QLabel, label_3)
++#: rc.cpp:30
++msgid "Backlinks:"
++msgstr "Обратные ссылки:"
++
++#. i18n: file: resourcequerywidget.ui:25
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:33
++msgid "Please enter a SPARQL query:"
++msgstr "Пожалуйста, введите запрос SPARQL:"
++
++#. i18n: file: resourcequerywidget.ui:32
++#. i18n: ectx: property (toolTip), widget (QToolButton, m_buttonBack)
++#: rc.cpp:36
++msgid "Browse back in the query history"
++msgstr "Назад по истории запроса"
++
++#. i18n: file: resourcequerywidget.ui:42
++#. i18n: ectx: property (toolTip), widget (QToolButton, m_buttonForward)
++#: rc.cpp:42
++msgid "Browse forward in the query history"
++msgstr "Вперёд по истории запроса"
++
++#. i18n: file: resourcequerywidget.ui:52
++#. i18n: ectx: property (text), widget (QPushButton, m_shorten)
++#: rc.cpp:48
++msgid "Shorten Query"
++msgstr "Укоротить запрос"
++
++#. i18n: file: resourcequerywidget.ui:59
++#. i18n: ectx: property (text), widget (QPushButton, m_queryButton)
++#: rc.cpp:51
++msgid "Run Query"
++msgstr "Запустить поиск"
++
++#. i18n: file: resourcequerywidget.ui:66
++#. i18n: ectx: property (text), widget (QPushButton, m_stopQueryButton)
++#: rc.cpp:54
++msgid "Stop Query"
++msgstr "Остановить поиск"
++
++#. i18n: file: settings/nepomukshellsettings.kcfg:9
++#. i18n: ectx: label, entry (recursiveQuery), group (ResourceBrowsing)
++#. i18n: file: settings/resourcebrowsersettingspage.ui:17
++#. i18n: ectx: property (text), widget (QCheckBox, kcfg_recursiveQuery)
++#: rc.cpp:63 rc.cpp:69
++msgid "Recursively query resources"
++msgstr "Рекурсивный поиск по ресурсам"
++
++#. i18n: file: settings/nepomukshellsettings.kcfg:13
++#. i18n: ectx: label, entry (queryLimit), group (ResourceBrowsing)
++#: rc.cpp:66
++msgid "Maximum number of results to show on one page"
++msgstr "Максимальное количество результатов на одну страницу"
++
++#: rc.cpp:70
++msgctxt "NAME OF TRANSLATORS"
++msgid "Your names"
++msgstr "Дронова Юлия"
++
++#: rc.cpp:71
++msgctxt "EMAIL OF TRANSLATORS"
++msgid "Your emails"
++msgstr "juliette.tux@gmail.coms"
++
++
