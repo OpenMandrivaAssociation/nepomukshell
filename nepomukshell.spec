@@ -1,15 +1,16 @@
 Summary:	Nepomukshell
 Name:		nepomukshell
 Version:	0.8.0
-Release:	%mkrel 1	
+Release:	2
 Source0:	%name-%version.tar.bz2
-BuildRequires:  kdelibs4-devel
+BuildRequires:	kdelibs4-devel
 License:	GPLv2
 Group:		Graphical desktop/KDE
 URL:		http://www.kde.org
+BuildRequires:	shared-desktop-ontologies
 
 %description
-Nepomukshell
+Nepomukshell.
 
 %files 
 %defattr(-,root,root)
@@ -29,12 +30,4 @@ Nepomukshell
 
 %install
 %makeinstall_std -C build
-
-
-
-
-%changelog
-* Wed Jul 20 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.8.0-1mdv2011.0
-+ Revision: 690775
-- import nepomukshell
 
