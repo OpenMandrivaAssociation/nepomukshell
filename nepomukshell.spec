@@ -7,7 +7,7 @@ BuildRequires:	kdelibs4-devel
 License:	GPLv2
 Group:		Graphical desktop/KDE
 URL:		http://www.kde.org
-BuildRequires:	shared-desktop-ontologies
+BuildRequires:	shared-desktop-ontologies-devel
 
 %description
 Nepomukshell.
