@@ -1,7 +1,7 @@
 Summary:	Nepomukshell
 Name:		nepomukshell
 Version:	0.8.0
-Release:	5
+Release:	6
 Source0:	%name-%version.tar.bz2
 BuildRequires:	kdelibs4-devel
 License:	GPLv2
